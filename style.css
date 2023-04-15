@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+:root {
+  --main-color: #6e59bd;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+
+body {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 100vh;
+}
+/* ------------------------------------------------*/
+.picture {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture_img {
+  max-width: 90%;
+}
+
+/* ------------------------------------------------*/
+.right {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.right_content {
+  min-width: 86%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+/* ------------------------------------------------*/
+.right_header {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(1.7rem, 1rem + 2vw, 2.3rem);
+}
+
+.title::after {
+  content: " ";
+  display: block;
+  height: 0.35rem;
+  background-color: var(--main-color);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+/* ------------------------------------------------*/
+.right_form {
+  width: 100%;
+  display: flex;
+  row-gap: 1rem;
+  flex-direction: column;
+}
+
+.input_group {
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  display: block;
+}
+input {
+  margin: 5px;
+  width: 96%;
+  font-size: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 15px 20px;
+  outline: none;
+}
+
+/* ------------------------------------------------*/
+.btn,
+.btn_register {
+  background-color: var(--main-color);
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px;
+  cursor: pointer;
+}
+
+.btn_register {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.btn:hover,
+.btn_register:hover {
+  font-size: 1.1rem;
+  border-radius: 0;
+  background-color: #6450ad;
+}
+
+/*------------------------------------------------*/
+@media screen and (max-width: 1120px) {
+  .right_content {
+    padding-bottom: 50rem;
+  }
+  .input_group {
+    display: block;
+    margin-bottom: 0;
+  }
+  .input_box {
+    margin: 10px;
+  }
+  .right_form {
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .picture {
+    display: none;
+  }
+  body {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  input {
+    padding: 10px;
+  }
+  .right_content {
+    max-width: 96%;
+    padding-bottom: 45rem;
+  }
+}
